@@ -1,18 +1,30 @@
-let a = 7
+<!DOCTYPE html>
+<html lang="en">
 
-function factorial(number){
-   let arr = Array.from(Array(number+1).keys())
-   let c = arr.slice(1,).reduce((a, b)=> a*b )
-   return c
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
 
+<body>
+    <div class="container red bg-green">
+        <div class="box" style="display: flex;" data-createdby="harry" data-conceptby="rohan" >Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+        <script>
+            // let div = document.createElement("div");
+            // div.innerHTML = "I have been inserted <b>by harry</b>"
+            // div.setAttribute("class", "created");
+            // document.querySelector(".container").before(div);
+            let cont = document.querySelector(".container")
+            cont.insertAdjacentHTML("beforebegin", "<b> I am under the water. Please h elp me here too much raining.... iuuuuooooo</b>")
+        </script>
+    </div>
+</body>
 
-function facFor(number){
-    let fac = 1;
-    for (let index = 1; index <= number; index++) {
-        fac = fac * index
-    }
-    return fac
-}
-console.log(factorial(a))
-console.log(facFor(a))
+</html>
