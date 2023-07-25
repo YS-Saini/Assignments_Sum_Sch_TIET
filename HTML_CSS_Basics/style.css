@@ -1,4 +1,11 @@
-body{
-    background-color: red;
-    color: aliceblue;
+.red{
+    color: red;
+   }
+   
+.bg-yellow{
+       background-color: yellow;
+}
+   
+#firstdiv{
+       /* background-color: red; */
 }
