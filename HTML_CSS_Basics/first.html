@@ -1,60 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Css Variables</title>
+    <title>CSS media query</title>
     <style>
-
-        :root{
-            --color: rgb(255, 0, 247);
-            --seccolor: rgb(231, 164, 246); 
-            --defpad: 23px;
-            --defop: 0.4;
+        body {
+            background-color: red;
         }
 
-        *{
-            margin: 0;
-            padding: 0;
-        }
-       .nav{
-            background-color: var(--color);
+        @media screen and (orientation: portrait) {
+            body{
+                border: 2px solid purple;
+            }
         }
 
-        ul{
+        @media only screen and (max-width: 455px){
+            body{
+
+                background-color: blue;
+            }
+            
+            .boxes{
+                flex-direction: column;
+            }
+        }
+        
+        /* @media not|only mediatype and (expressions) {
+            CSS-Code;
+        } */
+
+        .boxes{
             display: flex;
         }
 
-        ul li{
-            opacity: var(--defop);
-            list-style: none;
-            padding: var(--defpad);
-            border: 2px solid var(--seccolor);
-        }
-
-        ul li:first-child{
-            --color: rgb(243, 87, 8);
-            background-color: var(--color, blue);
-        }
-
-        .container{
-            background-color: var(--seccolor);
+        .box{
+            width: 344px;
+            height: 344px;
+            background-color: steelblue;
+            padding: 3px;
+            margin: 3px;
         }
 
     </style>
 </head>
-<body>
-    <div class="nav">
-        <ul>
-            <li>Home</li>
-            <li>About </li>
-            <li>Contact</li>
-        </ul>
-    </div>
-    
 
-    <div class="container">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse assumenda qui ad dolorem consequuntur facilis aliquam. Unde sapiente ipsam quaerat, at debitis nesciunt, totam nulla quae ad ipsum veniam sed eligendi rem deserunt quos maiores modi. Illo eaque expedita natus iusto nostrum dolorem quos est.
+<body>
+    <div>
+        Hey I am a red body guy!
+    </div>
+
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
     </div>
 </body>
+
 </html>
