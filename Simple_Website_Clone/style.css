@@ -99,3 +99,29 @@ section span img {
     text-align: center;
     padding-bottom: 36px;
 }
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:12px
+}
+
+.download :nth-child(2){
+    font-size: 23px;
+}
+
+.download img{
+    padding: 0px 12px;
+}
+.download{
+    display: flex;
+    font-family: sans-serif;
+    gap: 10px;
+    align-items: center;
+}
+
+@media screen and (max-width: 1145px) {
+    .grid{ 
+        grid-template-columns: 1fr; 
+    }
+}
