@@ -43,3 +43,26 @@ section span img {
     width: 82px;
     margin: 0 23px;
 }
+
+.first p {
+    font-size: 23px;
+    width: 44vw;
+    text-align: center;
+}
+
+
+
+.btn {
+    background: #00b6d1;
+    padding: 14px 16px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    margin: 12px 0;
+    cursor: pointer;
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+}
