@@ -38,3 +38,8 @@ nav {
 .first span {
     font-size: 40px;
 }
+
+section span img {
+    width: 82px;
+    margin: 0 23px;
+}
