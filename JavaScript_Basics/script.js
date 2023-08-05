@@ -1,42 +1,43 @@
-console.log("Hey this is tutorial 55");
+/* Create a faulty calculator using JavaScript
 
-var a = 5;
-// a = a + 1
-let b = 6;
-let c = "Harry";
-let _a = "Shubham";
-// var 55a = "Rohan"; // Not Allowed
+This faulty calculator does following:
+1. It takes two numbers as input from the user
+2. It perfoms wrong operations as follows:
 
-// console.log(a +  b + 8);
-// console.log(typeof a, typeof b, typeof c);
-{
-    // let a = 66;
-    console.log(a)
-}
-console.log(a)
-// const a1 = 6;
-// a1 = a1 + 1; // Not Allowed because a1 is constant
++ ---> -
+* ---> +
+- ---> /
+/ ---> **
 
+It performs wrong operation 10% of the times
 
-let x = "Harry bhai";
-let y = 22;
-let z = 3.55;
-const p = true;
-let q = undefined;
-let r = null;
+*/
 
-console.log(x, y, z, p, q, r)
-console.log(typeof x, typeof y, typeof z, typeof p, typeof q, typeof r)
+let random = Math.random()
+console.log(random)
+let a = prompt("Enter first number")
+let c = prompt("Enter operation")
+let b = prompt("Enter second number")
 
-
-let o = {
-    "name": "Harry",
-    "job code": 5600,
-    "is_handsome": true
+let obj = {
+    "+": "-",
+    "*": "+",
+    "-": "/",
+    "/": "**",
 }
 
-console.log(o);
-o.salary = "100crores";
-console.log(o);
-o.salary = "500crores";
-console.log(o);
+
+
+if (random > 0.1) {
+    // Perform correct calculation
+    console.log(`The result is ${a} ${c} ${b}`)
+    alert(`The result is ${eval(`${a} ${c} ${b}`)}`)
+    
+}
+
+else {
+    // Perform wrong calculation
+    c = obj[c]
+    alert(`The result is ${eval(`${a} ${c} ${b}`)}`) 
+
+}
