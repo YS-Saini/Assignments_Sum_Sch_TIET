@@ -1,15 +1,18 @@
-console.log("Harry")
+let a = 7
 
-// let boxes = document.getElementsByClassName("box")
-// console.log(boxes)
+function factorial(number){
+   let arr = Array.from(Array(number+1).keys())
+   let c = arr.slice(1,).reduce((a, b)=> a*b )
+   return c
+}
 
-// boxes[2].style.backgroundColor = "red"
 
-// document.getElementById("redbox").style.backgroundColor = "red"
-
-// document.querySelector(".box").style.backgroundColor = "green";
-console.log(document.querySelectorAll(".box"))
-
-document.querySelectorAll(".box").forEach(e =>{
-    e.style.backgroundColor = "green";
-}) 
+function facFor(number){
+    let fac = 1;
+    for (let index = 1; index <= number; index++) {
+        fac = fac * index
+    }
+    return fac
+}
+console.log(factorial(a))
+console.log(facFor(a))
